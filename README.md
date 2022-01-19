@@ -6,7 +6,7 @@
 
 ## General Info
 This browser based web application to ...
-Hi my name is Eugene. I'm excited.
+* Hi my name is Eugene, and I like Suisei's voice. This project will be my first on Github.
 * Hi, my name is Ian, and I like watching Ina. I'm excited about this project because it gives us a chance to work on something for the real world.
 	
 ## Technologies
