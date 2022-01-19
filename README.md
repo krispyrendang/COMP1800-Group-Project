@@ -7,6 +7,7 @@
 ## General Info
 This browser based web application to ...
 *Hi my name is Eugene. I'm excited.
+*Hi my name is Tas. This project is gitting on fine.
 	
 ## Technologies
 Technologies used for this project:
