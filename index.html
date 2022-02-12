@@ -2,16 +2,86 @@
 <html>
 
 <head>
-    <meta charset="utf-8">
-    <title>My BCIT Project</title>
-    <meta name="comp1800 boilerplate code" content="my bcit project">
-    <meta name="author" content="BCIT">
+  <meta charset="utf-8">
+  <title>My BCIT Project</title>
+  <meta name="comp1800 boilerplate code" content="my bcit project">
+  <meta name="author" content="BCIT">
+
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous">
+  </script>
+
+  <!-- Google Icons (Icons used on the page)-->
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
 </head>
 
 <body>
 
+  <nav class="navbar navbar-expand-lg navbar-light bg-info">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Navbar</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Eugene</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Ian</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Tas</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
 
-    
+  <div class="jumbotron">
+    <h1 class="display-4">Olympic Volunteer Management App</h1>
+    <p class="lead">We're here to help all volunteers with their volunteer needs!</p>
+    <hr class="my-4">
+    <p>Our team, BBY-13, is developing an app to help volunteers to better coordinate themselves
+      by allowing them to see schedules and notifications. Volunteers are the underlying belly of the Olympics,
+      they help in the shadows to make
+      sure everything goes smoothly. We dedicate this app to them!</p>
+    <p class="lead">
+      <a class="btn btn-primary btn-lg" href="#" role="button">Login / Sign-up</a>
+    </p>
+  </div>
+
+  <!--sticky footer with icons-->
+  <div class="fixed-bottom py-3 bg-info">
+    <div class="container text-center">
+      <footer class="navbar justify-content-evenly bg-info fixed-bottom">
+        <i class="material-icons md-48">star</i>
+        <i class="material-icons md-48">home</i>
+        <i class="material-icons md-48">map</i>
+      </footer>
+    </div>
+  </div>
+
+  <!-- copyright footer -->
+  <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+    <p class="col-md-4 mb-0 text-muted">&copy; 2022 BCIT BBY-13</p>
+    <a href="/"
+      class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-dark text-decoration-none">
+      <svg class="bi me-2" width="40" height="32">
+        <use xlink:href="#bootstrap" />
+      </svg>
+    </a>
+  </footer>
+
 
 </body>
 
