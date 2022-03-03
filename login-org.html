@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
-    <meta name="Volunteer Management App Main" content="VMA Main">
+    <title>VMA Login</title>
+    <meta name="Volunteer Management App Login" content="VMA login">
     <meta name="author" content="BBY13">
 
     <meta charset="utf-8">
@@ -39,15 +39,19 @@
 <body>
     <!------------------------------>
 
+
+    <!------------------------------>
+
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <div class="container-fluid bg-light text-dark p-5">
-        <div class="container bg-light p-5">
-            <h1 class="display-4">Welcome Volunteers!</h1>
-        </div>
+    <!-- the body of your page goes here -->
+
+    <div class="container">
+        <h1>Volunteer Leaders and Event Organizers, Let's Login!</h1>
     </div>
-    <!------------------------------>
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
 
     <!-- our own footer goes here-->
     <nav id="footer"></nav>
@@ -56,7 +60,9 @@
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
     <script src="./scripts/firebaseAPI.js"></script>
-    <script src="./scripts/skeleton.js"></script>
+    <script src="./scripts/skeleton-index.js"></script>
+
+    <!-- JScript specific to the login page - authentication -->
     <script src="./scripts/authentication.js"></script>
 
 </body>
