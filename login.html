@@ -2,8 +2,8 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
-    <meta name="Volunteer Management App Index" content="VMA Index">
+    <title>VMA Login</title>
+    <meta name="Volunteer Management App Login" content="VMA login">
     <meta name="author" content="BBY13">
 
     <meta charset="utf-8">
@@ -37,32 +37,20 @@
 </head>
 
 <body>
+    <!------------------------------>
     
+    
+    <!------------------------------>
+
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <!-- Login Sign-up page Header -->
-  <div class="jumbotron">
-    <h1 class="display-4">VMA - Volunteer Management App</h1>
-    <p class="lead">Creating a smooth experience for organizations and volunteers alike!</p>
-    <hr class="my-4">
-    <p>This is a web application that helps users organize and apply for tasks that require volunteers.</p>
-    <p class="lead">
-      <a class="btn btn-light btn-lg" href="login.html" role="button">Login / Sign-up</a>
-    </p>
-  </div>
-
-  <!--sticky footer with icons-->
-  <div class="fixed-bottom py-3 bg-info">
-    <div class="container text-center">
-      <footer class="navbar justify-content-evenly bg-light fixed-bottom">
-        <i class="material-icons md-48">star</i>
-        <i class="material-icons md-48">home</i>
-        <i class="material-icons md-48">map</i>
-      </footer>
+    <!-- the body of your page goes here -->
+    <div class="container">
+        <h1>Let's Login!</h1>
     </div>
-  </div>
-
+    <div id="firebaseui-auth-container"></div>
+    <div id="loader">Loading...</div>
 
     <!-- our own footer goes here-->
     <nav id="footer"></nav>
@@ -70,10 +58,10 @@
     <!---------------------------------------------->
     <!-- Your own JavaScript functions go here    -->
     <!---------------------------------------------->
-    <script src="./scripts/firebaseAPI.js"></script>
+    <script src="./scripts/firebaseAPI_TEAM99.js"></script>
     <script src="./scripts/skeleton.js"></script>
     <script src="./scripts/script.js"></script>
-    <script src="./scripts/authentication"></script>
+    <script src="./scripts/authentication.js"></script>
 
 </body>
 
