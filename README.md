@@ -1,7 +1,6 @@
 ## Volunteer Management App
 
 * [General info](#general-info)
-* [Technologies](#technologies)
 * [Contents](#content)
 
 ## General Info
@@ -9,14 +8,7 @@ This browser based web application to ...
 * Hi my name is Eugene.
 * Hi, my name is Ian, and I like watching Ina. I'm excited about this project because it gives us a chance to work on something for the real world.
 * Hi my name is Tas. This project is gitting on fine.
-	
-## Technologies
-Technologies used for this project:
-* HTML, CSS
-* JavaScript
-* Bootstrap 
-* ...
-	
+
 ## Content
 Content of the project folder:
 
@@ -25,6 +17,7 @@ Content of the project folder:
 ├── .gitignore               # Git ignore file
 ├── index.html               # landing HTML file, this is what users see when you come to url
 ├── login.html               # login page
+├── main.html                # main page
 └── README.md
 
 It has the following subfolders and files:
