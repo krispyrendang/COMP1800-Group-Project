@@ -33,7 +33,6 @@ It has the following subfolders and files:
 ├── scripts                  # Folder for scripts
     /authentication.js       # Script for firebase authentication
     /firebaseAPI.js          # Script for Firebase implementation
-    /script.js               # Script for webcam stuff?
     /skeleton.js             # Script for navbar and footer quick inputs
 ├── styles                   # Folder for styles
 
