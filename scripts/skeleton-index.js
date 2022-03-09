@@ -3,7 +3,7 @@
 // (navbar, footer, and other things) into html doc. 
 //---------------------------------------------------
 function loadSkeletonIndex(){
-    console.log($('#navbar').load('./text/nav-index.html'));
-    console.log($('#footer').load('./text/footer.html'));
+    console.log($('#navbar').load('../text/nav-index.html'));
+    console.log($('#footer').load('../text/footer.html'));
 }
 loadSkeletonIndex();  //invoke the function
