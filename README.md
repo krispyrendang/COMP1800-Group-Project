@@ -6,7 +6,7 @@
 ## General Info
 This browser based web application to ...
 * Hi my name is Eugene.
-* Hi, my name is Ian, and I like watching Ina. I'm excited about this project because it gives us a chance to work on something for the real world.
+* Hi, my name is Ian.
 * Hi my name is Tas. This project is gitting on fine.
 
 ## Content
