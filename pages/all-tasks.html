@@ -45,10 +45,36 @@
 
     <div class="container-fluid bg-light text-dark p-5">
         <div class="container bg-light p-5">
-            <h1 class="display-4" id="toptext">All Tasks! Sign Up Today!</h1>
+            <h1 class="display-4">Hi, <span id="name-goes-here"></span></h1>
+            <hr>
+            <p>Quote of the day: <span id="quote-goes-here">...</span></p>
         </div>
     </div>
-    <!------------------------------>
+
+    <!-- Bootstrap code: Sets a placeholder for all the task templates to be placed.  -->
+
+    <div class="container">
+        <h1>Tasks that require volunteers to sign up:</h1>
+        <!-- Here is container for cards  -->
+        <div class="container">
+            <div id="tasks-go-here" class="row row-cols-auto">
+            </div>
+        </div>
+    </div>
+
+    <template id="taskCardTemplate">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">placeholder</h5>
+                <p class="card-date">placeholder</p>
+                <br>
+                <p id="task-text" class="card-text">placeholder</p>
+                <a id="task-details" href="#" class="btn btn-light" style="float: right">Read more</a>
+            </div>
+        </div>
+    </template>
+
+
 
     <!-- our own footer goes here-->
     <nav id="footer"></nav>
