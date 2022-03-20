@@ -8,8 +8,8 @@ function insertName(){
                 //get the user name
                 var user_Name= userDoc.data().name;
                 console.log(user_Name);
-                $("#name-goes-here").text(user_Name); //jquery
-                // document.getElementByID("name-goes-here").innetText=user_Name;
+                // $("#name-goes-here").text(user_Name); //same method as below but using jquery
+                document.getElementById("name-goes-here").innerText = user_Name;    //using javascript            
             })    
         }
     
@@ -27,4 +27,5 @@ function insertName(){
             document.getElementById("quote-goes-here").innerHTML=tuesdayDoc.data().quote;
         })
     }
+    // Activate function after manually adding quotes in the database collection: quotes
     // read_display_Quote();
