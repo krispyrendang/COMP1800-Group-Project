@@ -32,6 +32,10 @@ It has the following subfolders and files:
     ├── login-org.html          # Login page for admins
     ├── main.html               # Main page
     ├── main-org.html           # Main page for admins
+    ├── all-tasks.html          # Job page
+    ├── forum.html              # Forum page
+    ├── thread.html             # Sub page for the forum
+    ├── calendar.html           # Calendar page
 ├── scripts                  # Folder for scripts
     ├── authentication.js       # Script for firebase authentication
     ├── firebaseAPI.js          # Script for Firebase implementation
