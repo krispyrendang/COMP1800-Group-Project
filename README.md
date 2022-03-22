@@ -4,7 +4,7 @@
 * [Contents](#content)
 
 ## General Info
-This browser based web application to ...
+THe three musketeers:
 * Hi my name is Eugene.
 * Hi, my name is Ian.
 * Hi my name is Tas. This project is gitting on fine.
