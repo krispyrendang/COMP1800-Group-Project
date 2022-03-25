@@ -40,31 +40,118 @@ function insertName(){
         var taskRef = db.collection("all-tasks");
 
         taskRef.add({
+            id:"t1",
+            name: "Task 1",    
+            city: "North Vancouver",
+            addedDate: 18,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [0830, 0830],
+            taskDate: [1, 2],
+            taskMonth: [5, 5],
+            taskYear: 2022,
+            description: "Task 1 description",
+            location: "Mt Seymour: 1700 Mt Seymour Rd, North Vancouver, BC V7G 1L3",
+        });
+
+        taskRef.add({
             id:"t2",
             name: "Task 2",    
             city: "North Vancouver",
-            dateAdded: "Date Added: March 20, 2022",
-            //  (Needs Tech Help) date: [1 May 2022 at 08:30:00, 2 May 2022 at 08:30:00 ],
+            addedDate: 20,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [0830, 0830],
+            taskDate: [1, 2],
+            taskMonth: [5, 5],
+            taskYear: 2022,
             description: "Task 2 description",
-            location: "1700 Mt Seymour Rd, North Vancouver, BC V7G 1L3",
+            location: "Mt Seymour: 1700 Mt Seymour Rd, North Vancouver, BC V7G 1L3",
         });
         taskRef.add({
             id:"t3",
             name: "Task 3",    
             city: "North Vancouver",
-            dateAdded: "Date Added: March 20, 2022",
-            // (Needs Tech Help) date: [1 May 2022 at 10:30:00, 2 May 2022 at 14:30:00 ],
+            addedDate: 22,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [1030, 1430],
+            taskDate: [1, 2],
+            taskMonth: [5, 5],
+            taskYear: 2022,
             description: "Task 3 description",
-            location: "1700 Mt Seymour Rd, North Vancouver, BC V7G 1L3",
+            location: "Mt Seymour: 1700 Mt Seymour Rd, North Vancouver, BC V7G 1L3",
         });
         taskRef.add({
             id:"t4",
             name: "Task 4",    
             city: "North Vancouver",
-            dateAdded: "Date Added: March 20, 2022",
-            //  (Needs Tech Help) date: [10 May 2022 at 14:30:00, 12 May 2022 at 14:30:00 ],
+            addedDate: 21,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [1430, 1430],
+            taskDate: [10, 12],
+            taskMonth: [5, 5],
+            taskYear: 2022,
             description: "Task 4 description",
-            location: "1700 Mt Seymour Rd, North Vancouver, BC V7G 1L3",
+            location: "Mt Seymour: 1700 Mt Seymour Rd, North Vancouver, BC V7G 1L3",
+        });
+        taskRef.add({
+            id:"t5",
+            name: "Task 5",    
+            city: "Whistler",
+            addedDate: 18,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [0830, 0830],
+            taskDate: [1, 2],
+            taskMonth: [5, 5],
+            taskYear: 2022,
+            description: "Task 5 description",
+            location: "Whistler Blackcomb: 4545 Blackcomb Way, Whistler, BC V0N 1B4",
+        });
+
+        taskRef.add({
+            id:"t6",
+            name: "Task 6",    
+            city: "Whistler",
+            addedDate: 20,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [0830, 0830],
+            taskDate: [1, 2],
+            taskMonth: [5, 5],
+            taskYear: 2022,
+            description: "Task 6 description",
+            location: "Whistler Blackcomb: 4545 Blackcomb Way, Whistler, BC V0N 1B4",
+        });
+        taskRef.add({
+            id:"t7",
+            name: "Task 7",    
+            city: "Whistler",
+            addedDate: 22,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [1030, 1430],
+            taskDate: [1, 2],
+            taskMonth: [5, 5],
+            taskYear: 2022,
+            description: "Task 7 description",
+            location: "Whistler Blackcomb: 4545 Blackcomb Way, Whistler, BC V0N 1B4",
+        });
+        taskRef.add({
+            id:"t8",
+            name: "Task 8",    
+            city: "Whistler",
+            addedDate: 21,
+            addedMonth: 3,
+            addedYear: 2022,
+            taskTime: [1430, 1430],
+            taskDate: [10, 12],
+            taskMonth: [5, 5],
+            taskYear: 2022,
+            description: "Task 8 description",
+            location: "Whistler Blackcomb: 4545 Blackcomb Way, Whistler, BC V0N 1B4",
         });
     }
 
@@ -79,7 +166,7 @@ function insertName(){
                     var taskName = doc.data().name; //gets the name field
                     var taskID = doc.data().id; //gets the unique ID field
                     var taskCity = doc.data().city; //gets the city field
-                    var taskDateAdded = doc.data().dateAdded; //gets the date added field
+                    var taskDateAdded = doc.data().addedMonth + "-" + doc.data().addedDate + "-" + doc.data().addedYear; //gets the date added field
                     let testTaskCard = taskCardTemplate.content.cloneNode(true);
                     testTaskCard.querySelector('.card-title').innerHTML = taskName;
                     testTaskCard.querySelector('.card-date').innerHTML = taskDateAdded;
