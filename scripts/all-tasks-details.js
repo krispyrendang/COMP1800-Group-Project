@@ -12,8 +12,19 @@ db.collection("all-tasks").where("id", "==", taskID)
                 //the query is more than one, we can check it right now and clean the DB if needed.
                 if (size = 1) {
                     var thisTask = Tasks[0].data();
-                    name = thisTask.name;
-                    document.getElementById("TaskName").innerHTML = name;
+                    //name = thisTask.name;
+                    taskName = thisTask.name; //gets the name field
+                    taskDate = thisTask.taskMonth[0] + "-" + thisTask.taskDate[0] + "-" + thisTask.taskYear + " at " + thisTask.taskTime[0] + "hrs"; //gets the date added field
+                    taskCity = thisTask.city; //gets the city field
+                    taskLocation = thisTask.location; //gets the location (address) field
+                    taskDetails = thisTask.description; //gets the description field
+                    document.getElementById("TaskName").innerHTML = taskName;
+                    document.getElementById("title").innerHTML = taskName;
+                    document.getElementById("taskDate").innerHTML = taskDate;
+                    document.getElementById("taskCity").innerHTML = taskCity;
+                    document.getElementById("taskLoc").innerHTML = taskLocation;
+                    document.getElementById("details").innerHTML = taskDetails;
+
                 } else {
                     console.log("Query has more than one data")
                 }
@@ -23,47 +34,5 @@ db.collection("all-tasks").where("id", "==", taskID)
             });
 
 
-function writeReview() {
 
-//For the Fields and drop-down menus
-let Title = document.getElementById("title").value;
-let Level = document.getElementById("level").value;
-let Season = document.getElementById("season").value;
-let Description = document.getElementById("description").value;
-
-//For the Radio buttons
-let Flooded = document.querySelector('input[name="flooded"]:checked').value;
-let Scrambled = document.querySelector('input[name="scrambled"]:checked').value;
-
-//to have access to the user information and from there, 
-//you can write a new collection called "Reviews" and write the user input in it.
-firebase.auth().onAuthStateChanged(user => {
-    if (user) {
-        var currentUser = db.collection("users").doc(user.uid);
-        var userID = user.uid;
-        //get the document for current user.
-        currentUser.get()
-            .then(userDoc => {
-                                            // Start a new collection and add all data in it.
-                db.collection("reviews").add({
-                    code: hikeID,
-                    owner: userID,
-                    title: Title,
-                    level: Level,
-                    season: Season,
-                    description: Description,
-                    flooded: Flooded,
-                    scrambled: Scrambled
-                })
-                .then(function(){
-                    window.location.href = "thanks.html"
-
-                });
-            })
-    } else {
-        // No user is signed in.
-        console.log("no user signed in");
-    }
-});
-}
 
