@@ -175,7 +175,7 @@ function insertName(){
                     //sets direction for clicking on the a tag.
                     testTaskCard.querySelector('a').onclick = () => setTaskData(taskID);
     
-                    // (not using images) testHikeCard.querySelector('img').src = `./images/${hikeID}.jpg`;
+                    // (not using images) testTaskCard.querySelector('img').src = `./images/${hikeID}.jpg`;
                     taskCardGroup.appendChild(testTaskCard);
                 })
     
