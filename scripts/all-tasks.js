@@ -166,16 +166,18 @@ function insertName(){
                     var taskName = doc.data().name; //gets the name field
                     var taskID = doc.data().id; //gets the unique ID field
                     var taskCity = doc.data().city; //gets the city field
+                    var taskDesc = doc.data().description; //gets the description
                     var taskDateAdded = doc.data().addedMonth + "-" + doc.data().addedDate + "-" + doc.data().addedYear; //gets the date added field
                     let testTaskCard = taskCardTemplate.content.cloneNode(true);
                     testTaskCard.querySelector('.card-title').innerHTML = taskName;
                     testTaskCard.querySelector('.card-date').innerHTML = taskDateAdded;
                     testTaskCard.querySelector('.card-city').innerHTML = taskCity;
-    
+                    testTaskCard.querySelector('.card-description').innerHTML=taskDesc;
+
                     //sets direction for clicking on the a tag.
                     testTaskCard.querySelector('a').onclick = () => setTaskData(taskID);
     
-                    // (not using images) testHikeCard.querySelector('img').src = `./images/${hikeID}.jpg`;
+                    // (not using images) testTaskCard.querySelector('img').src = `./images/${hikeID}.jpg`;
                     taskCardGroup.appendChild(testTaskCard);
                 })
     

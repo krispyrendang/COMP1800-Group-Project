@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="h-100">
 
 <head>
   <title>My BCIT Project</title>
@@ -35,16 +35,17 @@
   <!-------------------------------------------->
   <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
   <link rel="stylesheet" href="../styles/style.css">
+  <link rel="stylesheet" href="https://getbootstrap.com/docs/5.1/examples/cover/cover.css">
 
 </head>
 
 <body>
 
   <!-- our own navbar goes here -->
-  <nav id="navbar"></nav>
+  <!-- <nav id="navbar"></nav> -->
 
   <!-- Login Sign-up page Header -->
-  <div class="jumbotron">
+  <!-- <div class="jumbotron">
     <h1 class="display-4" id="toptext">VMA - Volunteer Management App</h1>
     <p class="lead" id="subtoptext">Creating a smooth experience for organizations and volunteers alike!</p>
     <hr class="my-4">
@@ -52,10 +53,10 @@
     <p class="lead">
       <a class="btn btn-light btn-lg" href="/pages/login.html" role="button">Login / Sign-up</a>
     </p>
-  </div>
+  </div> -->
 
   <!--sticky footer with icons-->
-  <div class="fixed-bottom py-3 bg-info">
+  <!-- <div class="fixed-bottom py-3 bg-info">
     <div class="container text-center">
       <footer class="navbar justify-content-evenly bg-light fixed-bottom">
         <i class="material-icons md-48">star</i>
@@ -63,11 +64,41 @@
         <i class="material-icons md-48">map</i>
       </footer>
     </div>
-  </div>
+  </div> -->
 
 
   <!-- our own footer goes here-->
-  <nav id="footer"></nav>
+  <!-- <nav id="footer"></nav> -->
+
+  <body class="d-flex h-100 text-center text-white bg-dark" background="../images/indexPhoto.jpg">
+    <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+      <header class="mb-auto">
+        <div>
+          <h3 class="float-md-start mb-0">Volunteer Management App</h3>
+          <nav class="nav nav-masthead justify-content-center float-md-end">
+            <a class="nav-link active" aria-current="page" href="../pages/index.html">Volunteers</a>
+            <a class="nav-link" href="#">Organizers</a>
+          </nav>
+        </div>
+      </header>
+
+      <main class="px-3">
+        <h1>VMA - Volunteer Management App</h1>
+        <p class="lead">Creating a smooth experience for organizations and volunteers alike!</p>
+        <p class="lead">
+          <a href="../pages/login.html" class="btn btn-lg btn-secondary fw-bold border-white bg-white">Log-in /
+            Sign-up</a>
+        </p>
+      </main>
+
+      <footer class="mt-auto text-white-50">
+        <p></p>
+      </footer>
+    </div>
+
+  </body>
+
+
 
   <!---------------------------------------------->
   <!-- Your own JavaScript functions go here    -->
