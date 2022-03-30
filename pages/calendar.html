@@ -52,21 +52,6 @@
     </div>
 
     <div id="calendar"></div>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var calendarEl = document.getElementById('calendar');
-            var calendar = new FullCalendar.Calendar(calendarEl, {
-                initialView: 'dayGridMonth',
-                dateClick: function (info) {
-                    console.log(info)
-                    alert('a day has been clicked!');
-                }
-
-            });
-            calendar.render();
-        });
-    </script>
-
     <!------------------------------>
 
     <!-- our own footer goes here-->
@@ -78,6 +63,7 @@
     <script src="../scripts/firebaseAPI.js"></script>
     <script src="../scripts/skeleton.js"></script>
     <script src="../scripts/authentication.js"></script>
+    <script src="../scripts/calendar.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js"></script>
 
 </body>

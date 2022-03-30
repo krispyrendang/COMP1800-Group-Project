@@ -34,6 +34,7 @@
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="../styles/style.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.1/examples/list-groups/list-groups.css">
 
 </head>
 
@@ -45,13 +46,14 @@
 
     <div class="container-fluid bg-light text-dark p-5">
         <div class="container bg-light p-5">
-            <h1 class="display-4">Welcome, <span id="name-goes-here"> !</span></h1>
+            <h1 class="display-4" id="toptext">Tasks</h1>
             <hr>
-            <p>Quote of the day: <span id="quote-goes-here">...</span></p>
+            <img src="../images/tasksImg.png" alt="tasksImg" width="567" height="287" class="center">
+            <!-- <p>Quote of the day: <span id="quote-goes-here">...</span></p> -->
         </div>
     </div>
 
-    <template id="taskCardTemplate">
+    <!-- <template id="taskCardTemplate">
         <div class="card">
             <div class="card-body">
                 <h5 class="card-title">placeholder</h5>
@@ -61,17 +63,38 @@
                 <a href="../pages/all-tasks-details.html" class="btn btn-light" style="float: right">Read more</a>
             </div>
         </div>
+    </template> -->
+
+
+
+    <template id="taskCardTemplate">
+        <div class="list-group">
+            <a href="../pages/all-tasks-details.html" class="list-group-item list-group-item-action d-flex gap-3 py-3" aria-current="true">
+                <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
+                    class="rounded-circle flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>
+                        <h6 class="mb-0 card-title">task name</h6>
+                        <small class="mb-0 opacity-75 card-city">location</small>
+                        <p class="mb-0 card-description">Description</p>
+                    </div>
+                    <p class="mb-0 opacity-50 text-nowrap card-date">date</p>
+                </div>
+            </a>
+        </div>
     </template>
 
     <!-- Sets a placeholder for the task templates to be placed -->
     <div class="container">
-        <h1>Tasks that require volunteers to sign up:</h1>
+        <h1 class="display-4" style="text-align: center;">Sign up!</h1>
+        <p class="opacity-50">List of tasks that are avaiable for you to sign up</p>
         <!-- Here is container for cards  -->
         <div class="container">
             <div id="taskCardGroup" class="row row-cols-auto">
             </div>
         </div>
     </div>
+
 
 
 
