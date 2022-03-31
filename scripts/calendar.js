@@ -2,10 +2,22 @@ document.addEventListener('DOMContentLoaded', function () {
     var calendarEl = document.getElementById('calendar');
     var calendar = new FullCalendar.Calendar(calendarEl, {
         initialView: 'dayGridMonth',
-        dateClick: function (info) {
-            console.log(info)
-            alert('a day has been clicked!');
-        }
+        headerToolbar: {
+            left: 'prev,next today',
+            center: 'title',
+            right: 'none',
+        },
+        events: [
+            {
+                title: 'hi',
+                url: '../pages/all-tasks-details.html', //does not link to the users task yet
+                start: '2022-03-30T14:30:00'
+            }
+        ],
+        // dateClick: function (info) {
+        //     console.log(info)
+        //     alert('a day has been clicked! ' + info.dateStr);
+        // }
 
     });
     calendar.render();

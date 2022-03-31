@@ -18,9 +18,28 @@ p {
 }
 
 .navbar-light {
-    background-color: #d8e2dc;
+    background-color: #dce0d9;
 }
 
 .bg-light {
     background-color: #fbf6ef !important;
+}
+
+.border-top {
+    background-color: #ead7c3;
+}
+
+.card-description {
+    text-align: left;
+}
+
+.right-bottom {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    font-size: xx-large;
+}
+
+#taskDate, #taskCity, #taskLoc, #details {
+    text-align: left;
 }

@@ -18,7 +18,7 @@ db.collection("all-tasks").where("id", "==", taskID)
                     taskCity = thisTask.city; //gets the city field
                     taskLocation = thisTask.location; //gets the location (address) field
                     taskDetails = thisTask.description; //gets the description field
-                    document.getElementById("TaskName").innerHTML = taskName;
+                    // document.getElementById("TaskName").innerHTML = taskName;
                     document.getElementById("title").innerHTML = taskName;
                     document.getElementById("taskDate").innerHTML = taskDate;
                     document.getElementById("taskCity").innerHTML = taskCity;
