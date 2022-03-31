@@ -14,10 +14,10 @@ document.addEventListener('DOMContentLoaded', function () {
                 start: '2022-03-30T14:30:00'
             }
         ],
-        // dateClick: function (info) {
-        //     console.log(info)
-        //     alert('a day has been clicked! ' + info.dateStr);
-        // }
+        dateClick: function (info) {
+            console.log(info)
+            alert('a day has been clicked! ' + info.dateStr);
+        }
 
     });
     calendar.render();
