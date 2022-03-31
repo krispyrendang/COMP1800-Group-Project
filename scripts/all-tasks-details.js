@@ -47,7 +47,8 @@ function displayTask() {
                 document.getElementById("details").innerHTML = taskDetails;
 
                 //Add a listener for users to sign up for the task on the task details page.
-                document.getElementById("apply").addEventListener("click", saveTask(taskID));
+                // document.getElementById("apply").addEventListener("click", saveTask(taskID));
+                // document.querySelector('a').onclick = () => saveTask(taskID);
 
             } else {
                 console.log("Query has more than one data")
@@ -58,7 +59,10 @@ function displayTask() {
         });
 }
 
-
+function doIt() {
+    saveTask(taskID);
+    console.log("you clicked");
+}
 
 //Adds the task id to the Users collection in an array format.
 function saveTask(taskID) {

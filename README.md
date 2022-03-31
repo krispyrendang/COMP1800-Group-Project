@@ -26,6 +26,7 @@ Content of the project folder:
 It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
+    ├──indexPhoto.jpg           # main photo for index page
 ├── pages                    # Folder for pages
     ├── index.html              # Landing HTML file, this is what users see when you come to url
     ├── login.html              # Login page

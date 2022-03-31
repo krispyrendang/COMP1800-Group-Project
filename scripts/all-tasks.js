@@ -177,6 +177,9 @@ function populateCardsDynamically() {
                 //sets direction for clicking on the a tag.
                 testTaskCard.querySelector('a').onclick = () => setTaskData(taskID);
 
+                //grabs the photo for each task.
+                testTaskCard.querySelector('img').src = `../images/${taskID}.jpg`;
+
                 // (not using images) testTaskCard.querySelector('img').src = `./images/${hikeID}.jpg`;
                 taskCardGroup.appendChild(testTaskCard);
             })
