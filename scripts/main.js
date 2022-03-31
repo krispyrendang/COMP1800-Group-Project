@@ -53,7 +53,7 @@ function displayMyTask() {
                         var taskID = doc.data().id; //gets the unique ID field
                         var taskCity = doc.data().city; //gets the city field
                         var taskDesc = doc.data().description; //gets the description
-                        var taskDates = doc.data().taskDate; //gets the task dates.
+                        var taskDates = doc.data().taskDate; //gets the task dates in array.
                         var displayDates = "(MM-DD-YYYY)<br>"; //collate data from array to a string.
                         for (let i = 0; i < taskDates.length; i++) {
                             displayDates += doc.data().taskMonth[i] + "-" + doc.data().taskDate[i] + "-" + doc.data().addedYear + "<br>"; //gets the date added field
