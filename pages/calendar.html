@@ -52,6 +52,28 @@
         </div>
     </div>
 
+    <template id="taskCardTemplate">
+        <a href="../pages/all-tasks-details.html"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3 design"
+            aria-current="true">
+            <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
+                class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <h6 class="mb-0 card-title">task name</h6>
+                    <!-- <small class="mb-0 opacity-75 card-city">location</small> -->
+                    <!-- <p class="mb-0 card-description">Description</p> -->
+                </div>
+                <p class="mb-0 opacity-50 text-nowrap card-date">date</p>
+                <p class="mb-0 opacity-100 right-bottom">+</p>
+            </div>
+        </a>
+    </template>
+
+    
+
+
+
     <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
         <div class="carousel-indicators">
             <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
@@ -71,28 +93,11 @@
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
-                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    aria-hidden="true" focusable="false">
                     <rect width="100%" height="100%" fill="#777" /></svg>
                 <div class="container">
                     <div class="carousel-caption text-start">
                         <h1>January</h1>
-                        <template id="taskCardTemplate">
-                            <a href="../pages/all-tasks-details.html"
-                                class="list-group-item list-group-item-action d-flex gap-3 py-3 design"
-                                aria-current="true">
-                                <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
-                                    class="rounded-circle flex-shrink-0">
-                                <div class="d-flex gap-2 w-100 justify-content-between">
-                                    <div>
-                                        <h6 class="mb-0 card-title">task name</h6>
-                                        <!-- <small class="mb-0 opacity-75 card-city">location</small> -->
-                                        <!-- <p class="mb-0 card-description">Description</p> -->
-                                    </div>
-                                    <p class="mb-0 opacity-50 text-nowrap card-date">date</p>
-                                    <p class="mb-0 opacity-100 right-bottom">+</p>
-                                </div>
-                            </a>
-                        </template>
                         <div class="container">
                             <div id="taskCardGroup">
                             </div>
@@ -108,8 +113,10 @@
                 <div class="container">
                     <div class="carousel-caption">
                         <h1>Febuary</h1>
-                        <p>Some representative placeholder content for the second slide of the carousel.</p>
-                        <p><a class="btn btn-lg btn-primary" href="#">Learn more</a></p>
+                        <div class="container">
+                            <div id="taskCardGroup">
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>

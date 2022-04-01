@@ -46,6 +46,8 @@ function displayUserTasks() {
                             taskInfo.querySelector('.card-title').innerHTML = taskName;
                             taskInfo.querySelector('.card-date').innerHTML = displayDates;
 
+                            taskInfo.querySelector('a').onclick = () => setTaskData(taskID);
+
                             taskInfo.querySelector('img').src = `../images/${taskID}.jpg`;
 
                             taskCardGroup.appendChild(taskInfo);
@@ -58,8 +60,7 @@ function displayUserTasks() {
                         console.log(taskDates);
                         console.log(taskName);
 
-                        taskInfo.querySelector('a').onclick = () => setTaskData(taskID);
-
+                        
                         // taskInfo.querySelector('img').src = `../images/${taskID}.jpg`;
 
                         // taskCardGroup.appendChild(taskInfo);
