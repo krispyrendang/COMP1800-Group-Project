@@ -28,31 +28,35 @@ function displayTask() {
             // get the documents of query
             Tasks = queryTask.docs;
 
-            // We want to have one document per hike, so if the the result of 
+            // We want to have one document per ID, so if the the result of 
             //the query is more than one, we can check it right now and clean the DB if needed.
             if (size = 1) {
                 var thisTask = Tasks[0].data();
                 //name = thisTask.name;
                 taskName = thisTask.name; //gets the name field
-                var taskDates = thisTask.taskDate; //gets the task dates in array.
-                console.log(taskDates);
-                var displayDates = "(MM-DD-YYYY)<br>"; //collate data from array to a string.
+                var taskDates = thisTask.taskMonth; //gets the task dates in array.
+                //console.log(taskDates);
+                var displayDates = ""; //collate data from array to a string.
                 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
+                //Loop to extract all the dates attached to the task, including the scheduled time for each event.
                 for (let i = 0; i < taskDates.length; i++) {
-                    displayDates += months[thisTask.taskMonth[i]] + "-" + thisTask.taskDate[i] + "-" + doc.data().addedYear + thisTask.taskTime + "hrs" + "<br>"; //gets the date added field
+                    let m = thisTask.taskMonth[i];
+                    //console.log(months[m - 1]);
+                    displayDates += months[m - 1] + "-" + thisTask.taskDate[i] + "-" + thisTask.addedYear + "\t at " + thisTask.taskTime[i] + "hrs" + "<br>"; //gets the date added field
 
-                    console.log(displayDates);
+                    //console.log(displayDates);
                 }
 
                 //taskDate = thisTask.taskMonth[0] + "-" + thisTask.taskDate[0] + "-" + thisTask.taskYear + " at " + thisTask.taskTime[0] + "hrs"; //gets the date added field
                 taskCity = thisTask.city; //gets the city field
+
                 taskLocation = thisTask.location; //gets the location (address) field
                 taskDetails = thisTask.description; //gets the description field
 
                 //assigns the data from Firestore to the respective html elements for display
                 document.getElementById("title").innerHTML = taskName;
-                document.getElementById("taskDate").innerHTML = taskDate;
+                document.getElementById("taskDate").innerHTML = displayDates;
                 document.getElementById("taskCity").innerHTML = taskCity;
                 document.getElementById("taskLoc").innerHTML = taskLocation;
                 document.getElementById("details").innerHTML = taskDetails;
