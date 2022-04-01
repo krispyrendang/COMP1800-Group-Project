@@ -80,8 +80,6 @@ function displayMyTask() {
 
                         //grabs the photo for each task.
                         testTaskCard.querySelector('img').src = `../images/${taskID}.jpg`;
-
-                        // (not using images) testTaskCard.querySelector('img').src = `./images/${hikeID}.jpg`;
                         taskCardGroup.appendChild(testTaskCard);
                     })
 
