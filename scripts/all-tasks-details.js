@@ -34,7 +34,18 @@ function displayTask() {
                 var thisTask = Tasks[0].data();
                 //name = thisTask.name;
                 taskName = thisTask.name; //gets the name field
-                taskDate = thisTask.taskMonth[0] + "-" + thisTask.taskDate[0] + "-" + thisTask.taskYear + " at " + thisTask.taskTime[0] + "hrs"; //gets the date added field
+                var taskDates = thisTask.taskDate; //gets the task dates in array.
+                console.log(taskDates);
+                var displayDates = "(MM-DD-YYYY)<br>"; //collate data from array to a string.
+                const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                for (let i = 0; i < taskDates.length; i++) {
+                    displayDates += months[thisTask.taskMonth[i]] + "-" + thisTask.taskDate[i] + "-" + doc.data().addedYear + thisTask.taskTime + "hrs" + "<br>"; //gets the date added field
+
+                    console.log(displayDates);
+                }
+
+                //taskDate = thisTask.taskMonth[0] + "-" + thisTask.taskDate[0] + "-" + thisTask.taskYear + " at " + thisTask.taskTime[0] + "hrs"; //gets the date added field
                 taskCity = thisTask.city; //gets the city field
                 taskLocation = thisTask.location; //gets the location (address) field
                 taskDetails = thisTask.description; //gets the description field
