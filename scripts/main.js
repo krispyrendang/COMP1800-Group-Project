@@ -87,3 +87,7 @@ function displayMyTask() {
     })
 
 };
+
+function setTaskData(id) {
+    localStorage.setItem('taskID', id);
+}

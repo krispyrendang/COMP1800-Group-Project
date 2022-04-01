@@ -51,14 +51,14 @@ p {
     background: #e0e0e0;
     box-shadow: -15px 15px 30px #c1c1c1,
         15px -15px 30px #ffffff;
-} */
+}
 
-/* .list-group {
+.list-group {
     border-radius: 50px;
-} */
+}
 
-/* #taskCardGroup {
+#taskCardGroup {
     display: flex;
-    flex-flow: column wrap;
+    flex-flow: column wrap;s
     flex: 200px;
 } */
