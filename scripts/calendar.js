@@ -34,33 +34,45 @@ function displayUserTasks() {
                         //var taskCity = doc.data().city; // not needed when showing the schedule
                         //var taskDesc = doc.data().description; //not needed when showing the schedule 
                         var taskDates = doc.data().taskDate;
-                        var displayDates = "";
+
+                        var displayDates = ""; //collate data from array to a string.
+                        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+
+                        //Loop to extract all the dates attached to the task, including the scheduled time for each event.
                         for (let i = 0; i < taskDates.length; i++) {
-                            displayDates = doc.data().addedYear + "-" + doc.data().taskMonth[i] + "-" + doc.data().taskDate[i] + "<br>";
+                            let m = doc.data().taskMonth[i];
+                            //console.log(months[m - 1]);
+                            displayDates += months[m - 1] + "-" + doc.data().taskDate[i] + "-" + doc.data().addedYear + "<br>" + "at " + doc.data().taskTime[i] + "hrs" + "<br><br>"; //gets the date added field
 
-                            
-
-
-
-                            let taskInfo = taskCardTemplate.content.cloneNode(true);
-                            taskInfo.querySelector('.card-title').innerHTML = taskName;
-                            taskInfo.querySelector('.card-date').innerHTML = displayDates;
-
-                            taskInfo.querySelector('a').onclick = () => setTaskData(taskID);
-
-                            taskInfo.querySelector('img').src = `../images/${taskID}.jpg`;
-
-                            taskCardGroup.appendChild(taskInfo);
+                            //console.log(displayDates);
                         }
-                        
+
+                        // for (let i = 0; i < taskDates.length; i++) {
+                        //     displayDates = doc.data().addedYear + "-" + doc.data().taskMonth[i] + "-" + doc.data().taskDate[i] + "<br>";
+
+
+
+
+
+                        //     let taskInfo = taskCardTemplate.content.cloneNode(true);
+                        //     taskInfo.querySelector('.card-title').innerHTML = taskName;
+                        //     taskInfo.querySelector('.card-date').innerHTML = displayDates;
+
+                        //     taskInfo.querySelector('a').onclick = () => setTaskData(taskID);
+
+                        //     taskInfo.querySelector('img').src = `../images/${taskID}.jpg`;
+
+                        //     taskCardGroup.appendChild(taskInfo);
+                        // }
+
                         // let taskInfo = taskCardTemplate.content.cloneNode(true);
                         // taskInfo.querySelector('.card-title').innerHTML = taskName;
                         // taskInfo.querySelector('.card-date').innerHTML = displayDates;
-                        
+
                         console.log(taskDates);
                         console.log(taskName);
 
-                        
+
                         // taskInfo.querySelector('img').src = `../images/${taskID}.jpg`;
 
                         // taskCardGroup.appendChild(taskInfo);
