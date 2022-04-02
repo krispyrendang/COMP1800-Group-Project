@@ -6,7 +6,7 @@
 ## General Info
 THe three musketeers:
 * Hi my name is Eugene.
-* Hi, my name is Ian.
+* Hi, my name is Ian. hi
 * Hi my name is Tas. This project is gitting on fine.
 
 ## Content
