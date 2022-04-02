@@ -2,13 +2,11 @@
 <html lang="en">
 
 <head>
-    <title>My BCIT Project</title>
-    <meta name="Volunteer Management App Forum" content="VMA Forum">
+    <title>VMA Thread</title>
+    <meta name="Volunteer Management App Thread" content="VMA Thread">
     <meta name="author" content="BBY13">
-
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
     <!------------------------------------------>
     <!-- Bootstrap Library CSS JS CDN go here -->
     <!------------------------------------------>
@@ -17,8 +15,6 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous">
     </script>
-
-
     <!-------------------------------------------------------->
     <!-- Firebase 8 Library related CSS, JS, JQuery go here -->
     <!-------------------------------------------------------->
@@ -28,7 +24,6 @@
     <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.js"></script>
     <link type="text/css" rel="stylesheet" href="https://www.gstatic.com/firebasejs/ui/4.8.1/firebase-ui-auth.css" />
-
     <!-------------------------------------------->
     <!-- Other libraries and styles of your own -->
     <!-------------------------------------------->
@@ -43,39 +38,12 @@
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <div class="header">
-        <h1>
-            Forum 1
-        </h1>
-    </div>
-    <div class="header">
-        <h4 class="title">
-            Thread 1
-        </h4>
-        <div class="bottom">
-            <p class="timestamp">
-                11/03/2022
-            </p>
-            <p class="comment-count">
-                4 comments
-            </p>
+    <div class="threads">
+        <div class="header">
         </div>
-    </div>
-    <textarea></textarea>
-    <button>add comment</button>
-    <div class="comments">
-        <div class="comment">
-            <div class="top-comment">
-                <p class="user">
-                    Eugene
-                </p>
-                <p class="timestamp">
-                    11/03/2022
-                </p>
-            </div>
-            <div class="comment-content">
-                Comment text here
-            </div>
+        <textarea></textarea>
+        <button>add comment</button>
+        <div class="comments">
         </div>
     </div>
     
@@ -89,6 +57,10 @@
     <script src="../scripts/firebaseAPI.js"></script>
     <script src="../scripts/skeleton.js"></script>
     <script src="../scripts/authentication.js"></script>
+    <script src="../scripts/data.js"></script>
+    <script src="../scripts/thread.js"></script>
+    
+    
 
 </body>
 
