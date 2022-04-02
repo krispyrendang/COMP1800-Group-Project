@@ -29,7 +29,7 @@
     <!-------------------------------------------->
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="../styles/style.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.css">
+    <link rel="stylesheet" href="https://getbootstrap.com/docs/5.0/examples/carousel/carousel.css">
 
 </head>
 
@@ -40,13 +40,266 @@
     <nav id="navbar"></nav>
 
     <!-- main info goes here -->
+
     <div class="container-fluid bg-light text-dark p-5">
         <div class="container bg-light p-5">
-            <h1 class="display-4" id="toptext">Calendar</h1>
+            <h1 class="display-4" id="toptext">My Volunteer Schedule</h1>
         </div>
     </div>
 
-    <div id="calendar"></div>
+    <template id="taskCardTemplate">
+        <a href="../pages/all-tasks-details.html"
+            class="list-group-item list-group-item-action d-flex gap-3 py-3 design" aria-current="true">
+            <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
+                class="rounded-circle flex-shrink-0">
+            <div class="d-flex gap-2 w-100 justify-content-between">
+                <div>
+                    <h6 class="mb-0 card-title">task name</h6>
+                    <!-- <small class="mb-0 opacity-75 card-city">location</small> -->
+                    <!-- <p class="mb-0 card-description">Description</p> -->
+                </div>
+                <p class="mb-0 opacity-50 text-nowrap card-date">date</p>
+                <p class="mb-0 opacity-100 right-bottom">+</p>
+            </div>
+        </a>
+    </template>
+
+
+
+
+
+    <div id="myCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true"
+                aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="3" aria-label="Slide 4"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="4" aria-label="Slide 5"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="5" aria-label="Slide 6"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="6" aria-label="Slide 7"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="7" aria-label="Slide 8"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="8" aria-label="Slide 9"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="9" aria-label="Slide 10"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="10" aria-label="Slide 11"></button>
+            <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="11" aria-label="Slide 12"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>January</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+1">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>February</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+2">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>March</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+3">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>April</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+4">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>May</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+5">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>June</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+6">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>July</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+7">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>August</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+8">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>September</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+9">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>October</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+10">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>November</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+11">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <svg class="bd-placeholder-img" width="100%" height="100%" xmlns="http://www.w3.org/2000/svg"
+                    aria-hidden="true" preserveAspectRatio="xMidYMid slice" focusable="false">
+                    <rect width="100%" height="100%" fill="#777" /></svg>
+
+                <div class="container">
+                    <div class="carousel-caption text-start">
+                        <h1>December</h1>
+                        <div class="container">
+                            <div id="taskCardGroup+12">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+    <!-- <template id="taskCardTemplate">
+        <div class="list-group">
+            <a href="../pages/all-tasks-details.html" class="list-group-item list-group-item-action d-flex gap-3 py-3"
+                aria-current="true">
+                <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
+                    class="rounded-circle flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>
+                        <h6 class="mb-0 card-title">task name</h6>
+                        <small class="mb-0 opacity-75 card-city">location</small>
+                        <p class="mb-0 card-description">Description</p>
+                    </div>
+                    <p class="mb-0 opacity-50 text-nowrap card-date">date</p>
+                    <p class="mb-0 opacity-100 right-bottom">+</p>
+                </div>
+            </a>
+        </div>
+    </template> -->
+
+    <!-- <div class="container">
+        <div id="taskCardGroup">
+        </div>
+    </div> -->
+
+    <!-- <div id="calendar"></div> -->
     <!------------------------------>
 
     <!-- our own footer goes here-->
@@ -59,7 +312,7 @@
     <script src="../scripts/skeleton.js"></script>
     <script src="../scripts/authentication.js"></script>
     <script src="../scripts/calendar.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js"></script>
+    <!-- <script src="https://cdn.jsdelivr.net/npm/fullcalendar@5.10.2/main.js"></script> -->
 
 </body>
 

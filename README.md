@@ -27,6 +27,15 @@ It has the following subfolders and files:
 ├── .git                     # Folder for git repo
 ├── images                   # Folder for images
     ├──indexPhoto.jpg           # main photo for index page
+    ├──taskImg.png              # tasks page photo 
+    ├──t1.jpg                   # t1 photo 
+    ├──t2.jpg                   # t2 photo   
+    ├──t3.jpg                   # t3 photo 
+    ├──t4.jpg                   # t4 photo 
+    ├──t5.jpg                   # t5 photo 
+    ├──t6.jpg                   # t6 photo 
+    ├──t7.jpg                   # t7 photo 
+    ├──t8.jpg                   # t8 photo 
 ├── pages                    # Folder for pages
     ├── index.html              # Landing HTML file, this is what users see when you come to url
     ├── login.html              # Login page

@@ -54,11 +54,16 @@ function displayMyTask() {
                         var taskCity = doc.data().city; //gets the city field
                         var taskDesc = doc.data().description; //gets the description
                         var taskDates = doc.data().taskDate; //gets the task dates in array.
-                        var displayDates = "(MM-DD-YYYY)<br>"; //collate data from array to a string.
-                        for (let i = 0; i < taskDates.length; i++) {
-                            displayDates += doc.data().taskMonth[i] + "-" + doc.data().taskDate[i] + "-" + doc.data().addedYear + "<br>"; //gets the date added field
+                        var displayDates = ""; //collate data from array to a string.
+                        const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
 
-                            console.log(displayDates);
+                        //Loop to extract all the dates attached to the task, including the scheduled time for each event.
+                        for (let i = 0; i < taskDates.length; i++) {
+                            let m = doc.data().taskMonth[i];
+                            //console.log(months[m - 1]);
+                            displayDates += months[m - 1] + "-" + doc.data().taskDate[i] + "-" + doc.data().addedYear + "<br>" + "at " + doc.data().taskTime[i] + "hrs" + "<br><br>"; //gets the date added field
+
+                            //console.log(displayDates);
                         }
 
                         let testTaskCard = taskCardTemplate.content.cloneNode(true);
@@ -75,8 +80,6 @@ function displayMyTask() {
 
                         //grabs the photo for each task.
                         testTaskCard.querySelector('img').src = `../images/${taskID}.jpg`;
-
-                        // (not using images) testTaskCard.querySelector('img').src = `./images/${hikeID}.jpg`;
                         taskCardGroup.appendChild(testTaskCard);
                     })
 
@@ -87,3 +90,7 @@ function displayMyTask() {
     })
 
 };
+
+function setTaskData(id) {
+    localStorage.setItem('taskID', id);
+}
