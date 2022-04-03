@@ -1,55 +1,23 @@
-var id = window.location.search.slice(1);
-var thread = threads.find(t => t.id == id);
-var header = document.querySelector('.header');
-var headerHtml = `
-    <h4 class="title">
-        ${thread.title}
-    </h4>
-    <div class="bottom">
-        <p class="timestamp">
-            ${new Date(thread.date).toLocaleString()}
-        </p>
-        <p class="comment-count">
-            ${thread.comments.length} comments
-        </p>
-    </div>
-`
-header.insertAdjacentHTML('beforeend', headerHtml)
+const threadsToPopulate = document.querySelector('#threads');
+const comment = document.querySelector('#comments');
 
-function addComment(comment) {
-    var commentHtml = `
-        <div class="comment">
-            <div class="top-comment">
-                <p class="user">
-                    ${comment.author}
-                </p>
-                <p class="comment-ts">
-                    ${new Date(comment.date).toLocaleString()}
-                </p>
-            </div>
-            <div class="comment-content">
-                ${comment.content}
-            </div>
-        </div>
-    `
-    comments.insertAdjacentHTML('beforeend', commentHtml);
+//Renders threads
+function renderContent(doc){
+    let forumThread = document.createElement('div');
+    let threadTitle = document.createElement('h4');
+    let threadContent = document.createElement('p');
+
+    threadTitle.textContent = doc.data().title;
+    threadContent.textContent = doc.data().content;
+
+    forumThread.setAttribute('data-id', doc.id);
+    forumThread.appendChild(threadtitle);
+    forumThread.appendChild(threadContent);
 }
 
-var comments = document.querySelector('.comments');
-for (let comment of thread.comments) {
-    addComment(comment);
-}
-
-var btn = document.querySelector('button');
-btn.addEventListener('click', function() {
-    var txt = document.querySelector('textarea');
-    var comment = {
-        content: txt.value,
-        date: Date.now(),
-        author: 'Aaron'
-    }
-    addComment(comment);
-    txt.value = '';
-    thread.comments.push(comment);
-    localStorage.setItem('threads', JSON.stringify(threads));
+db.collection('threads').get().then((snapshot) => {
+    snapshot.docs.forEach(doc => {
+        console.log(doc.data());
+        renderContent(doc);
+    })
 })

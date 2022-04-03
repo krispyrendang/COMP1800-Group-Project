@@ -62,3 +62,10 @@ p {
     flex-flow: column wrap;s
     flex: 200px;
 } */
+
+.hide {
+   position: absolute !important;
+   top: -9999px !important;
+   left: -9999px !important;
+}
+

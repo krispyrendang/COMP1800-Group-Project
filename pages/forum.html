@@ -30,6 +30,7 @@
     <!-- <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet"> -->
     <link rel="stylesheet" href="../styles/style.css">
 
+
 </head>
 
 <body>
@@ -37,10 +38,18 @@
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <div class="threads">
-        <ol>
-        </ol>
-    </div>
+    <button id="addThread">Toggle Creating New Thread</button>
+
+    <form id="inputBoxes">
+        <textarea name="inputTitle" id="inputTitle" placeholder="Enter the title"></textarea>
+        <textarea name="inputContent" id="inputContent" placeholder="Enter content"></textarea>
+        <button id="submitInput" onclick="refreshPage()">Submit</button>
+    </form>
+    <span id="name-goes-here"></span>
+
+    
+    <ol id="threads"></ol>
+    
 
 
     <!-- our own footer goes here-->
@@ -51,9 +60,8 @@
     <!---------------------------------------------->
     <script src="../scripts/firebaseAPI.js"></script>
     <script src="../scripts/skeleton.js"></script>
-    <script src="../scripts/authentication.js"></script>
-    <script src="../scripts/data.js"></script>
     <script src="../scripts/forum.js"></script>
+
 
 
 
