@@ -33,6 +33,7 @@ function renderThreads(doc){
 db.collection('threads').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
         renderThreads(doc);
+        console.log(doc.id);
     })
 })
 
