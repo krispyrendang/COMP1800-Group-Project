@@ -43,6 +43,7 @@ It has the following subfolders and files:
     ├── main.html               # Main page
     ├── main-org.html           # Main page for admins
     ├── all-tasks.html          # Job page
+    ├── all-tasks-details.html  # detail task page
     ├── forum.html              # Forum page
     ├── thread.html             # Sub page for the forum
     ├── calendar.html           # Calendar page
@@ -51,7 +52,18 @@ It has the following subfolders and files:
     ├── firebaseAPI.js          # Script for Firebase implementation
     ├── skeleton.js             # Script for navbar and footer quick inputs
     ├── authentication-org.js   # Script for admin authentication
+    ├── all-tasks-details.js    # Script for all the task details
+    ├── all-tasks.js            # Script for all tasks 
+    ├── calendar.js             # Script for calendar 
+    ├── data.js                 # Script for data
+    ├── forum.js                # Script for forum making
+    ├── main.js                 # Script for main page
+    ├── skeleton-index.js       # Script for navbar navbar on index
+    ├── test.js                 # Script for test
+    ├── thread.js               # Script for threads made
 ├── styles                   # Folder for styles
+    ├── calendar.css             # Style for the calendar page
+    ├── style.css                # Style for the whole site 
 ├── text                     # Folder for frequently used objects
     ├── footer.html             # Footer object
     ├── nav-index.html          # Navbar for index
