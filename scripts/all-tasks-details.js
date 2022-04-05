@@ -76,6 +76,7 @@ function displayTask() {
 
 function doIt() {
     saveTask(taskID);
+    alert("You signed up!");
     console.log("you clicked");
 }
 
