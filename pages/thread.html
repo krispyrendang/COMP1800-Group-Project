@@ -41,13 +41,15 @@
     <div id="contents"></div>
 
     <div class="comments">
-        <textarea></textarea>
-        <button>add comment</button>
+        <form id="inputBoxes">
+        <textarea id="commentBox"></textarea>
+        <button id="submit" onclick="refreshPage()">add comment</button>
+        </form>
     </div>
 
     <hr>
 
-    <dl id="comments"></dl>
+    <div id="comments"></div>
 
 
     <!-- our own footer goes here-->
