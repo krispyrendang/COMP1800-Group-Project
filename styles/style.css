@@ -71,11 +71,11 @@ p {
    left: -9999px !important;
 }
 
-#footer {
+/* #footer {
     position: fixed;
     bottom: 0;
     width: 100%;
-}
+} */
 
 #threads {
     padding-left: 5%;
