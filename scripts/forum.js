@@ -22,9 +22,6 @@ function renderThreads(doc) {
     li.setAttribute('data-id', doc.id);
     threadTitle.textContent = doc.data().title;
 
-
-
-
     link.appendChild(threadTitle);
     li.appendChild(link);
     li.appendChild(btn);
@@ -49,12 +46,9 @@ function setThreadData(id) {
 
 db.collection('threads').get().then((snapshot) => {
     snapshot.docs.forEach(doc => {
-
         console.log(doc.id);
         docId = doc.id;
         renderThreads(doc);
-
-
     })
 })
 
