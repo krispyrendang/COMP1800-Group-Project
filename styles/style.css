@@ -76,3 +76,36 @@ p {
     bottom: 0;
     width: 100%;
 }
+
+#threads {
+    padding-left: 5%;
+    text-decoration: none;
+}
+
+#newThreads {
+    padding-left: 5%;
+    text-decoration: none;
+}
+
+a:link {
+    text-decoration: none;
+    color: #14213d;
+}
+
+#inputTitle {
+    width: 25%;
+}
+
+#inputContent {
+    width: 25%;
+}
+
+button{
+    border-radius: 12px;
+    transition-duration: 0.4s;
+}
+
+button:hover {
+    background-color: #14213d;
+    color: white;
+}

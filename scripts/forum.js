@@ -8,6 +8,7 @@ function renderThreads(doc){
     let li = document.createElement('li');
     let threadTitle = document.createElement('h4');
     let btn = document.createElement('button');
+    let hr = document.createElement('hr');
     btn.innerHTML = "Delete Thread";
     //let threadTime = document.createElement('p');
     let link = document.createElement('a');
@@ -17,6 +18,7 @@ function renderThreads(doc){
     link.appendChild(threadTitle);
     li.appendChild(link);
     li.appendChild(btn);
+    li.appendChild(hr);
     //threadTime.textContent = doc.data().timestamp.toDate();
     //li.appendChild(threadTime);
 

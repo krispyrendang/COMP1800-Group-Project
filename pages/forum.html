@@ -34,24 +34,25 @@
 </head>
 
 <body>
-
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <button id="addThread">Toggle Creating New Thread</button>
+    <div id="newThreads">
+        <button id="addThread">Toggle Creating New Thread</button>
 
-    <form id="inputBoxes">
-        <textarea name="inputTitle" id="inputTitle" placeholder="Enter the title"></textarea>
-        <textarea name="inputContent" id="inputContent" placeholder="Enter content"></textarea>
-        <button id="submitInput" onclick="refreshPage()">Submit</button>
-    </form>
-    <span id="name-goes-here"></span>
+        <form id="inputBoxes">
+            <textarea name="inputTitle" id="inputTitle" placeholder="Enter the title"></textarea>
+            <textarea name="inputContent" id="inputContent" placeholder="Enter content"></textarea>
+            <button id="submitInput" onclick="refreshPage()">Submit</button>
+        </form>
+    </div>
 
+    <hr>
+
+    <div id="threadStyle">
+        <ol id="threads"></ol>
+    </div>
     
-    <ol id="threads"></ol>
-    
-
-
     <!-- our own footer goes here-->
     <nav id="footer"></nav>
 
