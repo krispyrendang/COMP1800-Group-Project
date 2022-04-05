@@ -5,8 +5,8 @@ var currentUser;
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         currentUser = db.collection("users").doc(user.uid); //global
-        console.log(currentUser, taskID);
-        co
+        console.log("current task is " + taskID);
+
         // the following functions are always called when someone is logged in
         displayTask();
 
