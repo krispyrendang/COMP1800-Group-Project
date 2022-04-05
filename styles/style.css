@@ -71,6 +71,8 @@ p {
    left: -9999px !important;
 }
 
-@media {
-    
+#footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
