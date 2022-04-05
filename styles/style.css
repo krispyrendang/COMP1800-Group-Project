@@ -26,6 +26,10 @@ p {
     background-color: #14213d !important;
 }
 
+.detail {
+    background-color: #0077b6;
+}
+
 .border-top {
     background-color: #e9c46a;
 }
