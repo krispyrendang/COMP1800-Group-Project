@@ -5,8 +5,8 @@ var currentUser;
 firebase.auth().onAuthStateChanged(user => {
     if (user) {
         currentUser = db.collection("users").doc(user.uid); //global
-        console.log(currentUser);
-
+        console.log(currentUser, taskID);
+        co
         // the following functions are always called when someone is logged in
         displayTask();
 
@@ -32,7 +32,7 @@ function displayTask() {
             //the query is more than one, we can check it right now and clean the DB if needed.
             if (size = 1) {
                 var thisTask = Tasks[0].data();
-                //name = thisTask.name;
+
                 taskName = thisTask.name; //gets the name field
                 var taskDates = thisTask.taskMonth; //gets the task dates in array.
                 //console.log(taskDates);
