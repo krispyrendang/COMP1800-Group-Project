@@ -17,22 +17,32 @@ p {
     width: 50%;
 }
 
+/* for the colour of the page */
 .navbar-light {
-    background-color: #dce0d9;
+    background-color: #d9d9d9;
 }
 
 .bg-light {
-    background-color: #fbf6ef !important;
+    background-color: #14213d !important;
 }
 
 .border-top {
-    background-color: #ead7c3;
+    background-color: #e9c46a;
 }
 
+
+/* for the description on each card holding the tasks */
 .card-description {
     text-align: left;
+    margin-top: 7px;
 }
 
+/* for the date on the card tasks */
+.card-date {
+    margin-left: 7px;
+}
+
+/* to keep the + on the bottom right of each task card */
 .right-bottom {
     display: flex;
     align-items: flex-end;
@@ -40,6 +50,7 @@ p {
     font-size: xx-large;
 }
 
+/* to align the task details on the left */
 #taskDate,
 #taskCity,
 #taskLoc,
@@ -47,21 +58,12 @@ p {
     text-align: left;
 }
 
-/* .design {
+/* for the design of the cards */
+.design {
     background: #e0e0e0;
     box-shadow: -15px 15px 30px #c1c1c1,
         15px -15px 30px #ffffff;
 }
-
-.list-group {
-    border-radius: 50px;
-}
-
-#taskCardGroup {
-    display: flex;
-    flex-flow: column wrap;s
-    flex: 200px;
-} */
 
 .hide {
    position: absolute !important;
@@ -69,3 +71,6 @@ p {
    left: -9999px !important;
 }
 
+@media {
+    
+}

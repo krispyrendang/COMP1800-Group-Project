@@ -39,16 +39,16 @@
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <div class="container-fluid bg-light text-dark p-5">
+    <div class="container-fluid bg-light text-white p-3">
         <div class="container bg-light p-5">
-            <h1 class="display-4" id="toptext">Welcome, <span id="name-goes-here"></span>!</h1>
+            <h1 class="display-4" id="toptext">Welcome, <span id="name-goes-here"></span></h1>
             <hr>
         </div>
     </div>
 
     <template id="taskCardTemplate">
         <div class="list-group">
-            <a href="../pages/all-tasks-details.html" class="list-group-item list-group-item-action d-flex gap-3 py-3"
+            <a href="../pages/all-tasks-details.html" class="list-group-item list-group-item-action d-flex gap-3 py-3 design" 
                 aria-current="true">
                 <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
                     class="rounded-circle flex-shrink-0">
@@ -67,10 +67,10 @@
 
     <!-- Sets a placeholder for the task templates to be placed -->
     <div class="container">
-        <h1 class="display-4" style="text-align: left;">My Tasks:</h1>
+        <h1 class="display-4" style="text-align: left; padding-top: 21px; padding-left: 150px;">My Tasks:</h1>
         <!-- Here is container for cards  -->
         <div class="container">
-            <div id="taskCardGroup" class="row row-cols-auto">
+            <div id="taskCardGroup" class="row-cols-auto">
             </div>
         </div>
     </div>
