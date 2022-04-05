@@ -1,4 +1,4 @@
-const commentToPopulate = document.querySelector('#comments');
+const commentToPopulate = document.querySelector('#commentsToPopulate');
 const comment = document.querySelector('#inputBoxes');
 var userName;
 
@@ -19,45 +19,49 @@ function renderContent(doc) {
 
 
 
-docRef.get().then((doc) => {
-    console.log("Document data:", doc.data());
-    renderContent(doc);
-});
+
+
+let threadID = localStorage.getItem("link");
+console.log(threadID);
 
 //getting the correct thread and displaying the messages.
-db.collection("threads").where("id", "==", doc.id).get()
+
+db.collection("threads").doc(threadID).get()
     .then(allThreads => {
         // forEach is a loop command to run through each task data
-        allThreads.forEach(doc => {
+        //allThreads.forEach(doc => {
 
-            var messageArray = doc.data().messages;
-            var userArray = doc.data().users;
-            console.log(messageArray[0]);
-            console.log(userArray[0]);
-
-
-            // for (let i = 0; i < taskRef.length; i++) {
-            //     // console.log(taskRef[i]);
-
-            //     db.collection("all-tasks").where("id", "==", taskRef[i]).get()
-            //         .then(allTasks => {
-            //             // forEach is a loop command to run through each task data
-            //             allTasks.forEach(doc => {
-
-            //                 var taskName = doc.data().name; //gets the name field
-            //                 var taskID = doc.data().id; //gets the unique ID field
-            //                 var taskCity = doc.data().city; //gets the city field
-            //                 var taskDesc = doc.data().description; //gets the description
-            //                 var taskDates = doc.data().taskDate; //gets the task dates in array.
-            //                 var displayDates = ""; //collate data from array to a string.
-            //                 const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
+        var messageArray = allThreads.data().messages;
+        var userArray = allThreads.data().users;
+        //console.log(messageArray[0]);
+        //console.log(userArray[0]);
 
 
-            //             });
-            //         });
-            // }
-        });
+        for (let i = 0; i < userArray.length; i++) {
+            console.log(messageArray[i]);
+            var userName = userArray[i];
+            var userMessage = userArray[i];
+            let dl = document.createElement('dl');
+            let dt = document.createElement('dt');
+            let dd = document.createElement('dd');
+            let commentContent = document.createElement('p');
+            let commentName = document.createElement('p');
+
+            commentContent.textContent = userMessage;
+            commentName.textContent = userName;
+
+            dd.appendChild(commentName);
+            dt.appendChild(commentContent);
+            dl.appendChild(dd);
+            dl.appendChild(dt);
+
+            commentToPopulate.appendChild(dl);
+
+
+
+        }
     });
+//});
 
 //gets username
 function insertName() {
@@ -66,7 +70,7 @@ function insertName() {
         currentUser.get()
             .then(userDoc => {
                 userName = userDoc.data().name;
-                console.log(userName);
+                //console.log(userName);
             })
     });
 }
@@ -100,24 +104,23 @@ function renderComments(doc) {
     let dd = document.createElement('dd');
     let commentContent = document.createElement('p');
     let commentName = document.createElement('p');
-    let line = document.createElement('hr');
 
-    commentContent.textContent = doc.data().content;
-    commentName.textContent = doc.data().name;
-    dt.appendChild(commentContent);
+    commentContent.textContent = doc.data().messages;
+    commentName.textContent = doc.data().users;
+
     dd.appendChild(commentName);
-    dl.appendChild(dt);
+    dt.appendChild(commentContent);
     dl.appendChild(dd);
-    dl.appendChild(line);
+    dl.appendChild(dt);
 
     commentToPopulate.appendChild(dl);
 }
 
 //writes the comments
-db.collection('messages').get().then((snapshot) => {
-    snapshot.docs.forEach(doc => {
-        renderComments(doc);
-        console.log(doc.id);
-        docId = doc.id;
-    })
-})
+// db.collection('messages').get().then((snapshot) => {
+//     snapshot.docs.forEach(doc => {
+//         renderComments(doc);
+//         console.log(doc.id);
+//         docId = doc.id;
+//     })
+// })

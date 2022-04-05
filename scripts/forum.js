@@ -15,7 +15,8 @@ function renderThreads(doc) {
     let link = document.createElement('a');
     link.setAttribute('href', "/pages/thread.html");
     link.id = docId;
-    //sets direction for clicking on the a tag.
+
+    //Saves the firestore id for the topic thread in the local storage for clicking on the a tag.
     link.onclick = () => setThreadData(docId);
 
     console.log(link);
