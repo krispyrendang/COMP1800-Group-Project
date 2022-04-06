@@ -38,44 +38,32 @@
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <template id="messageCardTemplate">
-        <div class="list-group">
-            <a href="../pages/all-tasks-details.html"
-                class="list-group-item list-group-item-action d-flex gap-3 py-3 design" aria-current="true">
-                <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
-                    class="rounded-circle flex-shrink-0">
-                <div class="d-flex gap-2 w-100 justify-content-between">
-                    <div>
-                        <h6 class="mb-0 card-title">task name</h6>
-                        <small class="mb-0 opacity-75 card-city">location</small>
-                        <p class="mb-0 card-description">Description</p>
-                    </div>
-                    <p class="mb-0 opacity-50 text-nowrap card-date">date</p>
-                    <p class="mb-0 opacity-100 right-bottom">+</p>
-                </div>
-            </a>
+    <form>
+        <div class="form-group">
+            <label for="exampleFormControlInput1">Add a title</label>
+            <input type="text" class="form-control" id="title" placeholder="Title">
+        </div><br>
+        <div class="form-group">
+            <label for="exampleFormControlTextarea1">Description</label>
+            <textarea class="form-control" id="description" rows="3"></textarea>
         </div>
-    </template>
-
-    <!-- Sets a placeholder for the task templates to be placed -->
-    <div class="container">
-        <h1 class="display-4" style="text-align: left; padding-top: 21px; padding-left: 150px;">My Tasks:</h1>
-        <!-- Here is container for cards  -->
-        <div class="container">
-            <div id="taskCardGroup" class="row-cols-auto">
-            </div>
+        <br>
+        <div class="d-flex justify-content-end">
+            <button type="button" onclick="createThread()">Submit</button>
         </div>
+        </div>
+    </form>
 
 
-        <!-- our own footer goes here-->
-        <nav id="footer"></nav>
+    <!-- our own footer goes here-->
+    <nav id="footer"></nav>
 
-        <!---------------------------------------------->
-        <!-- Your own JavaScript functions go here    -->
-        <!---------------------------------------------->
-        <script src="../scripts/firebaseAPI.js"></script>
-        <script src="../scripts/skeleton.js"></script>
-        <script src="../scripts/thread.js"></script>
+    <!---------------------------------------------->
+    <!-- Your own JavaScript functions go here    -->
+    <!---------------------------------------------->
+    <script src="../scripts/firebaseAPI.js"></script>
+    <script src="../scripts/skeleton.js"></script>
+    <script src="../scripts/create-thread.js"></script>
 
 
 

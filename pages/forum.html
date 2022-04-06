@@ -37,21 +37,39 @@
     <!-- our own navbar goes here -->
     <nav id="navbar"></nav>
 
-    <div id="newThreads">
-        <button id="addThread">Toggle Creating New Thread</button>
 
-        <form id="inputBoxes">
-            <textarea name="inputTitle" id="inputTitle" placeholder="Enter the title"></textarea>
-            <textarea name="inputContent" id="inputContent" placeholder="Enter content"></textarea>
-            <button id="submitInput">Submit</button>
-        </form>
+
+    <template id="threadTemplate">
+        <div class="list-group">
+            <a href="../pages/thread.html" class="list-group-item list-group-item-action d-flex gap-3 py-3 design"
+                aria-current="true">
+                <img src="https://github.com/twbs.png" alt="twbs" width="32" height="32"
+                    class="rounded-circle flex-shrink-0">
+                <div class="d-flex gap-2 w-100 justify-content-between">
+                    <div>
+                        <h6 class="mb-0 thread-title">thread name</h6>
+                        <small class="mb-0 opacity-75 card-city">location</small>
+                        <p class="mb-0 card-description">Description</p>
+                    </div>
+                    <p class="mb-0 opacity-50 text-nowrap card-date">date</p>
+                    <p class="mb-0 opacity-100 right-bottom">+</p>
+                </div>
+            </a>
+        </div>
+    </template>
+
+    <!-- Sets a placeholder for the task templates to be placed -->
+    <div class="container">
+        <br>
+        <a href="../pages/create-thread.html"><button>Create new thread</button></a>
+        <!-- Here is container for cards  -->
+        <div class="container">
+            <div id="threadGroup" class="row-cols-auto">
+            </div>
+        </div>
     </div>
 
-    <hr>
 
-    <div id="threadStyle">
-        <ol id="threads"></ol>
-    </div>
 
     <!-- our own footer goes here-->
     <nav id="footer"></nav>
