@@ -14,6 +14,7 @@ Content of the project folder:
 
 ```
  Top level of project folder: 
+├── .firebase                # firebase file
 ├── .gitignore               # Git ignore file
 ├── pages                    # Folder for pages
 ├── .git                     # Folder for git repo
@@ -36,6 +37,7 @@ It has the following subfolders and files:
     ├──t6.jpg                   # t6 photo 
     ├──t7.jpg                   # t7 photo 
     ├──t8.jpg                   # t8 photo 
+    ├──logo.png                 # logo photo 
 ├── pages                    # Folder for pages
     ├── index.html              # Landing HTML file, this is what users see when you come to url
     ├── login.html              # Login page
@@ -68,9 +70,12 @@ It has the following subfolders and files:
     ├── footer.html             # Footer object
     ├── nav-index.html          # Navbar for index
     ├── nav.html                # Main navbar
+    ├── nav-index-org.html      # nav for the organizer 
 
 Firebase hosting files: 
 ├── .firebaserc...
-
-
+├── .404.html                 
+├── firebase.json                  
+├── firestore.indexes.json                 
+├── firestore.rules  
 ```
